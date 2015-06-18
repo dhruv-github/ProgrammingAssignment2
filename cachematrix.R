@@ -2,6 +2,8 @@
 ## functions do
 
 ## Write a short comment describing this function
+## returns a list with functions to set value of matrix, get value of matrix
+## and set value of the inverse of the matrix and get that value  (6/17/15)  
 
 makeCacheMatrix <- function(x = matrix()) {
 	s <- NULL
@@ -17,6 +19,8 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
+## Function which decides whether to get the inverse of the matrix from cache or compute the 
+## inverse of the matrix   (6/17/15)
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
@@ -30,3 +34,14 @@ cacheSolve <- function(x, ...) {
         x$setsolve(s)
         s
 }
+
+
+### test ### 
+a=matrix(rnorm(64),nrow=8,ncol=8)
+mcm=makeCacheMatrix(a)
+ainv=cacheSolve(mcm)
+a%*%ainv ### verify
+ainv = cacheSolve(mcm)  ### now you get mesg 'getting cached data' 
+
+
+
