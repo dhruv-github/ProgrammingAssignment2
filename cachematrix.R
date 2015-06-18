@@ -1,5 +1,8 @@
 ## Put comments here that give an overall description of what your
 ## functions do
+## This script has two functions, one which returns a list of four functions to
+## get/set matrix data and the other which computes the inverse of the matrix if
+## the inverse is not already computed and stored in cache. The goal is to save time and resources.
 
 ## Write a short comment describing this function
 ## returns a list with functions to set value of matrix, get value of matrix
